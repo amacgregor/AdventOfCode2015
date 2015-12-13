@@ -18,6 +18,7 @@ defmodule Day1 do
     case head do 
       "(" -> calculateFloor(tail,count + 1)
       ")" -> calculateFloor(tail,count - 1)
+      _   -> calculateFloor(tail,count)
     end
   end
 end
