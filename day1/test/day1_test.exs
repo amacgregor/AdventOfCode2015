@@ -24,4 +24,9 @@ defmodule Day1Test do
     instructions = "((()"
     assert Day1.getFloor(instructions) == 2
   end
+
+  test "the elevator can stop at the basement" do
+    instructions = "((())))"
+    assert Day1.stopAtFloor(instructions, -1) == "Arrived at floor -1 in 7 steps"
+  end
 end
