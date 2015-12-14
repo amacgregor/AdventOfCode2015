@@ -23,8 +23,9 @@ defmodule Day1 do
   end
 
   def stopAtFloor(instructions, stopAt) do 
-    list = String.codepoints(instructions)
-    findFloor(list, stopAt)
+    instructions
+    |> String.codepoints
+    |> findFloor stopAt
   end
 
   def findFloor(_, _, floor \\ 0, count \\ 0)
