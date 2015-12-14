@@ -1,11 +1,12 @@
 defmodule Day1 do
-  def getFloor() do
+  def getFloor do
     calculateFloor([])
   end
 
   def getFloor(instructions) do
-    list = String.codepoints(instructions)
-    calculateFloor(list)
+    instructions
+    |> String.codepoints
+    |> calculateFloor
   end
 
   defp calculateFloor(_, count \\ 0)
